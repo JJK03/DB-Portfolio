@@ -52,6 +52,10 @@ async function initializeDatabase() {
 
 app.get("/", (req, res) => res.send("Hi!"));
 
+app.get("/api/test", (req, res) => {
+  res.json({ status: "success", message: "API 연결 정상" });
+});
+
 app.post("/api/contact", async (req, res) => {
   console.log("/api/contact called, body:", req.body);
 
