@@ -7,7 +7,10 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173/', 'http://13.236.207.35'],
+  credentials: true
+}));
 app.use(express.json());
 
 const dbConfig = {
