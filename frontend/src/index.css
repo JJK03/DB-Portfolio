@@ -2,10 +2,10 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #1A2A3A, #2C3E50, #C0392B, #2E8B57); /* Jaws Bar inspired gradient with green */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  color: #fff;
+  color: #fff; /* Retained pure white for better visibility */
   min-height: 100vh;
 }
 
@@ -33,49 +33,50 @@ body {
 
 /* Ensure text inside glass is white and legible */
 .card-glass, .card-glass h1, .card-glass h2, .card-glass h3, .card-glass h4, .card-glass h5, .card-glass p, .card-glass span, .card-glass li {
-  color: #fff !important;
+  color: #fff !important; /* Reverted to pure white for better visibility */
 }
 .card-glass .text-muted {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.6) !important; /* Slightly less opaque for less contrast */
 }
 .badge.bg-primary {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
+  color: #fff !important; /* Retained pure white for better visibility */
 }
 
 /* Override default button styles for the new theme */
 .btn-primary {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.15); /* Slightly less opaque */
+  border-color: rgba(255, 255, 255, 0.25); /* Slightly less opaque */
+  color: #fff; /* Retained pure white for better visibility */
 }
 .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.25); /* Slightly less opaque on hover */
+  border-color: rgba(255, 255, 255, 0.35); /* Slightly less opaque on hover */
 }
 
 /* Custom form control for glass theme */
 .form-control-glass {
-  background: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: #fff !important;
+  background: rgba(0, 0, 0, 0.15) !important; /* Slightly less opaque */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
+  color: #fff !important; /* Retained pure white for better visibility */
 }
 
-.form-control-glass::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(255, 255, 255, 0.5) !important;
-  opacity: 1; /* Firefox */
+.form-control-glass::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important; /* Slightly less opaque for placeholder */
+  opacity: 1;
 }
 
-.form-control-glass:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(255, 255, 255, 0.5) !important;
+.form-control-glass:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
 }
 
-.form-control-glass::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(255, 255, 255, 0.5) !important;
+.form-control-glass::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
 }
 
 .form-control-glass:focus {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(0, 0, 0, 0.2) !important; /* Slightly less opaque on focus */
+  border-color: rgba(255, 255, 255, 0.3) !important; /* Slightly less opaque on focus */
   box-shadow: none !important;
 }
 
@@ -86,14 +87,14 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #fff;
+  color: #fff; /* Retained pure white for better visibility */
   text-align: center;
   white-space: nowrap;
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(0, 0, 0, 0.15) !important; /* Slightly less opaque */
+  border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
   border-radius: .25rem;
-  margin-left: -1px; /* To make it appear attached to the input */
-  height: calc(1.5em + .75rem + 2px); /* Match input height */
+  margin-left: -1px;
+  height: calc(1.5em + .75rem + 2px);
 }
 
 

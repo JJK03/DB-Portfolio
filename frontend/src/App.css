@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.skill-icon {
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  user-select: none;
+}
+
+.skill-icon:hover {
+  transform: scale(1.25) translateY(-4px);
+}

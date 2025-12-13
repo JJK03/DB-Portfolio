@@ -1,26 +1,54 @@
 import React from "react";
+import {
+  FaJava,
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaNodeJs,
+} from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
+import profileImg from "../assets/profile.jpg";
+import TechStackSection from "../components/TechStackSection";
 
 function AboutPage() {
   const skills = {
-    프론트엔드: ["Java", "React", "HTML", "CSS"],
-    백엔드: ["Node.js"],
-    데이터베이스: ["MySQL"],
+    프론트엔드: [
+      { name: "Java", icon: <FaJava color="#007396" /> },
+      { name: "React", icon: <FaReact color="#61DAFB" /> },
+      { name: "HTML", icon: <FaHtml5 color="#E34F26" /> },
+      { name: "CSS", icon: <FaCss3Alt color="#1572B6" /> },
+    ],
+    백엔드: [
+      { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
+    ],
+    데이터베이스: [{ name: "MySQL", icon: <SiMysql color="#4479A1" /> }],
   };
 
   const experiences = [
-    { title: "Linker", date: "Java 프로그래밍 응용", githubLink: "https://github.com/JJK03/LINKer" },
-    { title: "News_NaverAPI", date: "서버구축관리", githubLink: "https://github.com/JJK03/News_NaverAPI" },
-    { title: "LiarGame", date: "TCP/IP", githubLink: "https://github.com/JJK03/LiarGame" },
+    {
+      title: "Linker",
+      date: "Java 프로그래밍 응용 ('25-01)",
+      githubLink: "https://github.com/JJK03/LINKer",
+    },
+    {
+      title: "News_NaverAPI",
+      date: "서버구축관리 ('25-02)",
+      githubLink: "https://github.com/JJK03/News_NaverAPI",
+    },
+    {
+      title: "LiarGame",
+      date: "TCP/IP ('25-02)",
+      githubLink: "https://github.com/JJK03/LiarGame",
+    },
   ];
 
   return (
     <div className="container py-5">
-      {/* --- Profile Section --- */}
       <div className="card-glass p-4 p-md-5 mb-5">
         <div className="row g-4 align-items-center">
           <div className="col-lg-4 text-center">
             <img
-              src="https://via.placeholder.com/250"
+              src={profileImg}
               className="img-fluid rounded-circle"
               alt="Profile"
               style={{
@@ -30,52 +58,53 @@ function AboutPage() {
             />
           </div>
           <div className="col-lg-8">
-            <h1 className="display-5 fw-bold">장진규</h1>
+            <h1 className="display-5 fw-bold">Jang Jin Kyu</h1>
             <p className="lead text-muted">Junior Developer</p>
+            <p>Email: wkdwlsrb09@gmail.com</p>
             <p>
               <a
                 href="https://github.com/JJK03"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Github 바로가기
+                JJK03 Github 바로가기
               </a>
             </p>
           </div>
         </div>
       </div>
 
-      {/* --- Skills Section --- */}
-      <div className="mb-5">
-        <h2 className="text-center mb-4">기술 스택</h2>
-        <div className="card-glass p-4">
-          {Object.entries(skills).map(([category, items]) => (
-            <div key={category} className="mb-3">
-              <h5 className="mb-2">{category}</h5>
-              <div>
-                {items.map((skill) => (
-                  <span key={skill} className="badge bg-primary fs-6 me-2 mb-2">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+      <h2 className="text-center mb-4">기술 스택</h2>
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <TechStackSection
+            title="Frontend"
+            skills={skills.프론트엔드}
+          />
+        </div>
+        <div className="col-md-4 mb-4">
+          <TechStackSection
+            title="Backend"
+            skills={skills.백엔드}
+          />
+        </div>
+        <div className="col-md-4 mb-4">
+          <TechStackSection
+            title="DataBase"
+            skills={skills.데이터베이스}
+          />
         </div>
       </div>
 
-      {/* --- Experience Section --- */}
       <div className="mb-5">
-        <h2 className="text-center mb-4">경험</h2>
+        <h2 className="text-center mb-4">프로젝트</h2>
         <div className="row">
           {experiences.map((experience, index) => (
             <div className="col-md-4 mb-4" key={index}>
               <div className="card-glass h-100">
                 <div className="card-body text-center p-4">
                   <h5 className="card-title">{experience.title}</h5>
-                  <p className="card-text text-muted">
-                    {experience.date}
-                  </p>
+                  <p className="card-text text-muted">{experience.date}</p>
                   {experience.githubLink && (
                     <a
                       href={experience.githubLink}
@@ -93,13 +122,12 @@ function AboutPage() {
         </div>
       </div>
 
-      {/* --- Education Section --- */}
       <div>
         <h2 className="text-center mb-4">교육</h2>
         <div className="card-glass p-4">
           <div className="text-center">
             <h5 className="mb-1">인하공업전문대학교</h5>
-            <p className="text-muted mb-0">컴퓨터시스템공학 (2022 ~ )</p>
+            <p className="text-muted mb-0">컴퓨터시스템공학 ('22 ~ )</p>
           </div>
         </div>
       </div>
@@ -108,3 +136,4 @@ function AboutPage() {
 }
 
 export default AboutPage;
+
