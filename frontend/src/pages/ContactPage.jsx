@@ -16,7 +16,7 @@ function ContactPage() {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch('http://13.211.234.158:3001/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
