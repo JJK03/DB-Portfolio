@@ -5,10 +5,9 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaNodeJs,
+  FaDatabase,
 } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
-import profileImg from "../assets/profile.jpg";
-import TechStackSection from "../components/TechStackSection";
 
 function AboutPage() {
   const skills = {
@@ -18,9 +17,7 @@ function AboutPage() {
       { name: "HTML", icon: <FaHtml5 color="#E34F26" /> },
       { name: "CSS", icon: <FaCss3Alt color="#1572B6" /> },
     ],
-    백엔드: [
-      { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
-    ],
+    백엔드: [{ name: "Node.js", icon: <FaNodeJs color="#339933" /> }],
     데이터베이스: [{ name: "MySQL", icon: <SiMysql color="#4479A1" /> }],
   };
 
@@ -48,7 +45,7 @@ function AboutPage() {
         <div className="row g-4 align-items-center">
           <div className="col-lg-4 text-center">
             <img
-              src={profileImg}
+              src="/profile.jpg"
               className="img-fluid rounded-circle"
               alt="Profile"
               style={{
@@ -74,27 +71,19 @@ function AboutPage() {
         </div>
       </div>
 
-      <h2 className="text-center mb-4">기술 스택</h2>
-      <div className="row">
-        <div className="col-md-4 mb-4">
-          <TechStackSection
-            title="Frontend"
-            skills={skills.프론트엔드}
-          />
+      {Object.entries(skills).map(([category, items]) => (
+        <div key={category} className="mb-5 text-center">
+          <h5 className="mb-3">{category}</h5>
+
+          <div className="d-flex justify-content-center flex-wrap gap-4">
+            {items.map((skill) => (
+              <div key={skill.name} className="skill-icon" title={skill.name}>
+                {skill.icon}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="col-md-4 mb-4">
-          <TechStackSection
-            title="Backend"
-            skills={skills.백엔드}
-          />
-        </div>
-        <div className="col-md-4 mb-4">
-          <TechStackSection
-            title="DataBase"
-            skills={skills.데이터베이스}
-          />
-        </div>
-      </div>
+      ))}
 
       <div className="mb-5">
         <h2 className="text-center mb-4">프로젝트</h2>
@@ -121,7 +110,6 @@ function AboutPage() {
           ))}
         </div>
       </div>
-
       <div>
         <h2 className="text-center mb-4">교육</h2>
         <div className="card-glass p-4">
@@ -136,4 +124,3 @@ function AboutPage() {
 }
 
 export default AboutPage;
-
