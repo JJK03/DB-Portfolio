@@ -48,7 +48,6 @@ function ContactPage() {
       <p className="text-center lead">
         아래 연락 양식을 통해 저에게 연락하실 수 있습니다.
       </p>
-      {/* Add your contact form or details here */}
       <div className="card-glass p-4 p-md-5 mt-4">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">

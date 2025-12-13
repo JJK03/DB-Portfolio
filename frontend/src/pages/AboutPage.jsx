@@ -71,19 +71,27 @@ function AboutPage() {
         </div>
       </div>
 
-      {Object.entries(skills).map(([category, items]) => (
-        <div key={category} className="mb-5 text-center">
-          <h5 className="mb-3">{category}</h5>
-
-          <div className="d-flex justify-content-center flex-wrap gap-4">
-            {items.map((skill) => (
-              <div key={skill.name} className="skill-icon" title={skill.name}>
-                {skill.icon}
+      <div className="mb-5">
+        <h2 className="text-center mb-4">Skills</h2>
+        <div className="row">
+          {Object.entries(skills).map(([category, items]) => (
+            <div className="col-md-4 mb-4" key={category}>
+              <div className="card-glass h-100">
+                <div className="card-body text-center p-4">
+                  <h5 className="card-title">{category}</h5>
+                  <div className="d-flex justify-content-center flex-wrap gap-4 mt-3">
+                    {items.map((skill) => (
+                      <div key={skill.name} className="skill-icon" title={skill.name}>
+                        {skill.icon}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
 
       <div className="mb-5">
         <h2 className="text-center mb-4">프로젝트</h2>

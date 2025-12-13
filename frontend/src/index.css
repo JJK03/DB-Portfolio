@@ -2,10 +2,10 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: linear-gradient(-45deg, #1A2A3A, #2C3E50, #C0392B, #2E8B57); /* Jaws Bar inspired gradient with green */
+  background: linear-gradient(-45deg, #1A2A3A, #2C3E50, #C0392B, #2E8B57);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  color: #fff; /* Retained pure white for better visibility */
+  color: #fff;
   min-height: 100vh;
 }
 
@@ -21,7 +21,6 @@ body {
   }
 }
 
-/* Glassmorphism Card Style */
 .card-glass {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -31,38 +30,35 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure text inside glass is white and legible */
 .card-glass, .card-glass h1, .card-glass h2, .card-glass h3, .card-glass h4, .card-glass h5, .card-glass p, .card-glass span, .card-glass li {
-  color: #fff !important; /* Reverted to pure white for better visibility */
+  color: #fff !important;
 }
 .card-glass .text-muted {
-  color: rgba(255, 255, 255, 0.6) !important; /* Slightly less opaque for less contrast */
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 .badge.bg-primary {
-  background-color: rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
-  color: #fff !important; /* Retained pure white for better visibility */
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
 }
 
-/* Override default button styles for the new theme */
 .btn-primary {
-  background-color: rgba(255, 255, 255, 0.15); /* Slightly less opaque */
-  border-color: rgba(255, 255, 255, 0.25); /* Slightly less opaque */
-  color: #fff; /* Retained pure white for better visibility */
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
 }
 .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.25); /* Slightly less opaque on hover */
-  border-color: rgba(255, 255, 255, 0.35); /* Slightly less opaque on hover */
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* Custom form control for glass theme */
 .form-control-glass {
-  background: rgba(0, 0, 0, 0.15) !important; /* Slightly less opaque */
-  border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
-  color: #fff !important; /* Retained pure white for better visibility */
+  background: rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
 }
 
 .form-control-glass::placeholder {
-  color: rgba(255, 255, 255, 0.45) !important; /* Slightly less opaque for placeholder */
+  color: rgba(255, 255, 255, 0.45) !important;
   opacity: 1;
 }
 
@@ -75,8 +71,8 @@ body {
 }
 
 .form-control-glass:focus {
-  background: rgba(0, 0, 0, 0.2) !important; /* Slightly less opaque on focus */
-  border-color: rgba(255, 255, 255, 0.3) !important; /* Slightly less opaque on focus */
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
   box-shadow: none !important;
 }
 
@@ -87,20 +83,16 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #fff; /* Retained pure white for better visibility */
+  color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: rgba(0, 0, 0, 0.15) !important; /* Slightly less opaque */
-  border: 1px solid rgba(255, 255, 255, 0.15) !important; /* Slightly less opaque */
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
   border-radius: .25rem;
   margin-left: -1px;
   height: calc(1.5em + .75rem + 2px);
 }
 
-
-
-
-/* Clean up default Vite styles that are no longer needed */
 :root, body, #root {
   width: 100%;
   height: 100%;
