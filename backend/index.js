@@ -84,7 +84,7 @@ app.post("/api/contact", async (req, res) => {
 
 async function startServer() {
   await initializeDatabase();
-  app.listen(port, () => {
+  app.listen(port, '0.0.0.0', () => {
     console.log(`서버 가동중 -> http://localhost:${port}`);
   });
 }
